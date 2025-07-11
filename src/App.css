@@ -16,8 +16,12 @@
 }
 
 .subtitle{
-  margin-top: 8px;
   font-size: medium;
 }
 
+.tripInput{
+    size: 10px;
+    padding: 10px;
+    justify-content: flex-end;
+}
 
