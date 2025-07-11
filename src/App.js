@@ -8,7 +8,9 @@ function App() {
         <p>
           What to Pack
         </p>
-        
+        <p className='subtitle'>
+          a website for all your packing needs
+        </p>
       </header>
     </div>
   );
