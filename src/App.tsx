@@ -2,6 +2,7 @@ import './App.css';
 import genResponse from './GPT.ts';
 import { Form, Button } from 'react-bootstrap';
 import React, {useState} from 'react';
+import Markdown from 'react-markdown';
 
 let keyData = "$OPENAI_API_KEY";
 const saveKeyData = "MYKEY";
@@ -45,7 +46,7 @@ function App() {
         />
       </Form.Group>
        <Button onClick={generateReportForUser} >Ready to Submit?</Button>
-       <p>{gpt}</p>
+       <Markdown>{gpt}</Markdown>
       </header>
       <Form className="api-form-container">
         <Form.Label style={{ fontFamily: "Courier New", color: '#800080', fontSize: '20px', }}>API Key:</Form.Label>
