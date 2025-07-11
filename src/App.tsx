@@ -14,7 +14,8 @@ if (prevKey !== null) {
 function App() {
   const [key, setKey] = useState(keyData); 
   const[response, setResponse]=useState("");
-  const[gpt, setGPT]=useState("");
+  const[markdown, setGPT]=useState("");
+  const sections = markdown.split(/(?=### )/);
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
@@ -46,7 +47,13 @@ function App() {
         />
       </Form.Group>
        <Button onClick={generateReportForUser} >Ready to Submit?</Button>
-       <div className="chat-output-container"><ReactMarkdown>{gpt}</ReactMarkdown></div>
+       <div className="chat-output-container">
+      {sections.map((section, idx) => (
+        <div className="markdown-card" key={idx}>
+          <ReactMarkdown>{section}</ReactMarkdown>
+        </div>
+      ))}
+      </div>
       </header>
       <Form className="api-form-container">
         <Form.Label style={{ fontFamily: "Courier New", color: '#800080', fontSize: '20px', }}>API Key:</Form.Label>

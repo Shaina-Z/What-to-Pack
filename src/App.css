@@ -26,12 +26,18 @@
 }
 
 .chat-output-container {
-  background-color: #f8f8ff;
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding: 20px;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", sans-serif;
+}
+
+
+.markdown-card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
 }
