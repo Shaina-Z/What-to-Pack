@@ -15,6 +15,7 @@ function App() {
   const [key, setKey] = useState(keyData); 
   const[response, setResponse]=useState("");
   const[markdown, setGPT]=useState("");
+  const[submitted,setStatus]=useState(false);
   const sections = markdown.split(/(?=### )/);
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
@@ -29,6 +30,7 @@ function App() {
  async function generateReportForUser() {
             const result = await genResponse(response);
             setGPT(result);
+            setStatus(true);
         }
   return (
     <div className="App">
@@ -39,14 +41,16 @@ function App() {
         <p className='subtitle'>
           a website for all your packing needs
         </p>
-          <Form.Group className='tripInput'>
-        <Form.Control
+          <Form.Group>
+        <Form.Control 
         as="textarea"
         value={response}
         onChange={updateResponse}
+        className='tripInput'
         />
       </Form.Group>
-       <Button onClick={generateReportForUser} >Ready to Submit?</Button>
+       <Button className="submit" onClick={generateReportForUser} style={{ fontSize: '20px'}}>Ready to Submit?</Button>
+       {submitted && (
        <div className="chat-output-container">
       {sections.map((section, idx) => (
         <div className="markdown-card" key={idx}>
@@ -54,6 +58,7 @@ function App() {
         </div>
       ))}
       </div>
+       )}
       </header>
       <Form className="api-form-container">
         <Form.Label style={{ fontFamily: "Courier New", color: '#800080', fontSize: '20px', }}>API Key:</Form.Label>

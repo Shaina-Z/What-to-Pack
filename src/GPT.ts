@@ -12,7 +12,7 @@ async function genResponse(responses: string) {
         const completion = await openai.chat.completions.create({
             messages: [{"role": "system", "content": "You are a helpful trave; assistant."},
             {"role": "user", "content": "Based on these answers, what clothes would you recommend for them to pack based on where they are going?. \n" 
-                +"Please make each answer its own markdown block"
+                +"Please make each answer its own markdown file"
                 + responses },
                 ],
                 
