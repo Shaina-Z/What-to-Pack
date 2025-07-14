@@ -3,6 +3,7 @@ import genResponse from './GPT.ts';
 import { Form, Button } from 'react-bootstrap';
 import React, {useState} from 'react';
 import ReactMarkdown from 'react-markdown';
+import loading from './loading.gif';//unsure why there is an error here, as the loading icon does appear
 
 let keyData = "$OPENAI_API_KEY";
 const saveKeyData = "MYKEY";
@@ -16,6 +17,7 @@ function App() {
   const[response, setResponse]=useState("");
   const[markdown, setGPT]=useState("");
   const[submitted,setStatus]=useState(false);
+  const[isLoading,setLoading]=useState(false);
   const sections = markdown.split(/(?=### )/);
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
@@ -28,9 +30,11 @@ function App() {
         setResponse(event.target.value)
     }
  async function generateReportForUser() {
-            const result = await genResponse(response);
-            setGPT(result);
-            setStatus(true);
+  setLoading(true);
+  const result = await genResponse(response);
+  setGPT(result);
+  setStatus(true);
+  setLoading(false);
         }
   return (
     <div className="App">
@@ -50,6 +54,7 @@ function App() {
         />
       </Form.Group>
        <Button className="submit" onClick={generateReportForUser} style={{ fontSize: '20px'}}>Ready to Submit?</Button>
+       {isLoading&&(<img src={loading} alt="loading"></img>)}
        {submitted && (
        <div className="chat-output-container">
       {sections.map((section, idx) => (
