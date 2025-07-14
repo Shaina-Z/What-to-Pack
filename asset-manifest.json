@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/What-to-Pack/static/css/main.803929fb.css",
-    "main.js": "/What-to-Pack/static/js/main.ab5abdb1.js",
+    "main.css": "/What-to-Pack/static/css/main.b5cd81f8.css",
+    "main.js": "/What-to-Pack/static/js/main.b6cbea31.js",
     "static/js/453.82d61fcc.chunk.js": "/What-to-Pack/static/js/453.82d61fcc.chunk.js",
+    "static/media/loading.gif": "/What-to-Pack/static/media/loading.42aaa181adb3af3bef08.gif",
     "index.html": "/What-to-Pack/index.html",
-    "main.803929fb.css.map": "/What-to-Pack/static/css/main.803929fb.css.map",
-    "main.ab5abdb1.js.map": "/What-to-Pack/static/js/main.ab5abdb1.js.map",
+    "main.b5cd81f8.css.map": "/What-to-Pack/static/css/main.b5cd81f8.css.map",
+    "main.b6cbea31.js.map": "/What-to-Pack/static/js/main.b6cbea31.js.map",
     "453.82d61fcc.chunk.js.map": "/What-to-Pack/static/js/453.82d61fcc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.803929fb.css",
-    "static/js/main.ab5abdb1.js"
+    "static/css/main.b5cd81f8.css",
+    "static/js/main.b6cbea31.js"
   ]
 }
