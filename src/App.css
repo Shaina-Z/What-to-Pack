@@ -63,6 +63,7 @@
   border-radius: 15px;
   background-color: #ffffff; 
   border-color:#ffffff ;
+  margin:25px;
 }
 
 .chat-output-container {
@@ -89,6 +90,7 @@
 }
 
 .api-form-container{
+  font-size: medium;
   color:#800080;
   font-weight: bolder;
 }

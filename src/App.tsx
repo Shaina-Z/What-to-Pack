@@ -70,13 +70,13 @@ function App() {
       ))}
       </div>
        )}
-      </header>
-      <Form className="api-form-container">
+       <Form className="api-form-container">
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
           <Button className="submit" onClick={handleSubmit}>Submit</Button>
           </Form>
+      </header>
     </div>
   );
 }
