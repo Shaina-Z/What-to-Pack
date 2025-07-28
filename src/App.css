@@ -16,12 +16,26 @@
   color: #800080;
 }
 
-.subtitle{
-  font-size: medium;
-  border-bottom: 2px solid black;
-  width: 100vw;
+.title{
+  border: 2px solid white;
+  border-radius: 16px;
+  border-width: 25px;
+  margin: 25px;
+  background-color: white;
 }
 
+.subtitle{
+  font-size: medium;
+  
+}
+.explanation{
+  font-size: medium;
+  margin: 25px;
+  border: 2px solid white;
+  border-radius: 16px;
+  border-width: 10px;
+  background-color: white;
+}
 .tripInput{
   width: 500px;
   height:200px;

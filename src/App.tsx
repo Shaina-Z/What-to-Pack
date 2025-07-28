@@ -40,13 +40,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className='title'>
         <p>
           What to Pack
         </p>
         <p className='subtitle'>
           a website for all your packing needs
         </p>
-        
+        </div>
+        <div className='explanation'>Ready to start packing for your next trip? Simply tell us where you're
+          going, and our handy travel assisstant will do the rest!
+        </div>
           <Form.Group>
         <Form.Control 
         as="textarea"
