@@ -31,6 +31,7 @@ function App() {
     }
  async function generateReportForUser() {
   setLoading(true);
+  setStatus(false);
   const result = await genResponse(response);
   setGPT(result);
   setStatus(true);
@@ -45,6 +46,7 @@ function App() {
         <p className='subtitle'>
           a website for all your packing needs
         </p>
+        
           <Form.Group>
         <Form.Control 
         as="textarea"
@@ -54,7 +56,7 @@ function App() {
         />
       </Form.Group>
        <Button className="submit" onClick={generateReportForUser} style={{ fontSize: '20px'}}>Ready to Submit?</Button>
-       {isLoading&&(<img src={loading} alt="loading"></img>)}
+       {isLoading&&(<img src={loading} alt="loading" className='loading'></img>)}
        {submitted && (
        <div className="chat-output-container">
       {sections.map((section, idx) => (
@@ -66,10 +68,10 @@ function App() {
        )}
       </header>
       <Form className="api-form-container">
-        <Form.Label style={{ fontFamily: "Courier New", color: '#800080', fontSize: '20px', }}>API Key:</Form.Label>
+        <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
-          <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+          <Button className="submit" onClick={handleSubmit}>Submit</Button>
           </Form>
     </div>
   );
